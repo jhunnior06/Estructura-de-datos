@@ -12,6 +12,17 @@
 //Calculadora de Factorial: 
 //4) Crea una función que calcule la factorial de un número. 
 
+Console.WriteLine("========================================= Ejercicio 4 ==========================================");
+Console.WriteLine("Ingresa un número para calcular su factorial:");
+int numero = Convert.ToInt32(Console.ReadLine());
+
+long factorial = 1;
+for (int i = 2; i <= numero; i++)
+{
+    factorial *= i;
+}
+
+Console.WriteLine($"El factorial de {numero} es: {factorial}");
 //Número Primo: 
 //5) Verifica si un número ingresado por el usuario es primo o no. 
 
