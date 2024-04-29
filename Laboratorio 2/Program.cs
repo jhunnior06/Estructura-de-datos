@@ -24,7 +24,10 @@ for (int i = 2; i <= numero; i++)
 
 Console.WriteLine($"El factorial de {numero} es: {factorial}");
 //Número Primo: 
-//5) Verifica si un número ingresado por el usuario es primo o no. 
+//5) Verifica si un número ingresado por el usuario es primo o no.
+
+
+//Console.WriteLine("========================================= Ejercicio 5 ==========================================");
 
 //Inversión de Cadena: 
 //6) Toma una cadena de texto y muestra su inversión. 
