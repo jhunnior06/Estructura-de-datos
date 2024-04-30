@@ -36,29 +36,20 @@ int numero = ObtenerNumero();
 Console.WriteLine(EsPrimo(numero)
     ? $"{numero} es un número primo."
     : $"{numero} no es un número primo.");
-
-Console.ReadLine(); // Mantener la consola abierta hasta que el usuario presione Enter
     
 static int ObtenerNumero()
 {
     Console.WriteLine("Ingresa un número para verificar si es primo:");
     return Convert.ToInt32(Console.ReadLine());
 }
-
-static bool EsPrimo(int numero)
+static Boolean EsPrimo(int numero)
 {
     if (numero <= 1)
-    {
         return false;
-    }
 
     for (int i = 2; i * i <= numero; i++)
-    {
         if (numero % i == 0)
-        {
             return false;
-        }
-    }
 
     return true;
 }
