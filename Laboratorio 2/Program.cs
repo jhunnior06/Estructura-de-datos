@@ -82,36 +82,30 @@ else if (a == 4)
 
 //Console.WriteLine($"El factorial de {numero} es: {factorial}");
 //Número Primo: 
+
 //5) Verifica si un número ingresado por el usuario es primo o no.
 
-
-
-
-//Console.WriteLine("========================================= Ejercicio 5 ==========================================");
-
-//int numero = ObtenerNumero();
-
-//Console.WriteLine(EsPrimo(numero)
-//    ? $"{numero} es un número primo."
-//    : $"{numero} no es un número primo.");
-
-//static int ObtenerNumero()
-//{
-//    Console.WriteLine("Ingresa un número para verificar si es primo:");
-//    return Convert.ToInt32(Console.ReadLine());
-//}
-//static bool EsPrimo(int numero)
-//{
-//    if (numero <= 1)
-//        return false;
-
-//    for (int i = 2; i * i <= numero; i++)
-//        if (numero % i == 0)
-//            return false;
-
-//    return true;
-//}
-
+else if (a == 5)
+{
+    Console.WriteLine("========================================= Ejercicio 5 ==========================================");
+    Console.WriteLine("Ingrese un número para verificar si es primo:");
+    int n1 = int.Parse(Console.ReadLine());
+    bool esPrimo = true; 
+    int i = 2;
+    while (i < n1)
+    {
+        if (n1 % i == 0)
+        {
+            esPrimo = false; 
+            break;
+        }
+        i++;
+    }
+    if (esPrimo && n1 > 1) 
+        Console.WriteLine("El número " + n1 + " es primo");
+    else
+        Console.WriteLine("El número " + n1 + " no es primo");
+}
 //Inversión de Cadena: 
 //6) Toma una cadena de texto y muestra su inversión. 
 
