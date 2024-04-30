@@ -1,16 +1,74 @@
 //Desarrollo y Actividades 
 //Ejercicio parte 01: 
 //Operaciones Básicas: 
-//1) Realiza la suma, resta, multiplicación y división de dos números ingresados por el usuario. 
 
+Console.WriteLine("Ingrese un número para elegir una opción:");
+int a = int.Parse(Console.ReadLine());
+
+////1) Realiza la suma, resta, multiplicación y división de dos números ingresados por el usuario. 
+if (a == 1)
+{
+    Console.WriteLine("Ingresa el primer número:");
+    var numero1 = Convert.ToDouble(Console.ReadLine());
+    Console.WriteLine("Ingresa el segundo número:");
+    var numero2 = Convert.ToDouble(Console.ReadLine());
+
+    // Resolver
+    var suma = numero1 + numero2;
+    var resta = numero1 - numero2;
+    var multiplicacion = numero1 * numero2;
+
+    // Verificar si el segundo número es distinto de cero para evitar división por cero
+    var division = 0.0;
+    if (numero2 != 0)
+        division = numero1 / numero2;
+    else
+        Console.WriteLine("No es posible dividir entre cero.");
+
+    //Mostrar resultados
+    Console.WriteLine($"Suma: {suma}");
+    Console.WriteLine($"Resta: {resta}");
+    Console.WriteLine($"Multiplicación: {multiplicacion}");
+    if (numero2 != 0)
+        Console.WriteLine($"División: {Math.Round(division, 2)}");
+}
 //Verificación de Número Par o Impar: 
 //2) Solicita un número al usuario y determina si es par o impar. 
 
+else if (a == 2)
+{
+    Console.WriteLine("Ingrese un número para verificar si es par o impar:");
+    int n1 = int.Parse(Console.ReadLine());
+    if (n1 % 2 != 0)
+        Console.WriteLine(n1 + " es impar");
+    else
+        Console.WriteLine(n1 + " es par");
+}
 //Área de un Triángulo: 
 //3) Pide la base y la altura de un triángulo al usuario y calcula su área. 
 
+else if (a == 3)
+{
+    Console.WriteLine("Ingrese la base del triángulo:");
+    int b = int.Parse(Console.ReadLine());
+    Console.WriteLine("Ingrese la altura del triángulo:");
+    int h = int.Parse(Console.ReadLine());
+    Console.WriteLine("Área del triángulo: " + ((b * h) / 2));
+}
 //Calculadora de Factorial: 
 //4) Crea una función que calcule la factorial de un número. 
+
+else if (a == 4)
+{
+    Console.WriteLine("Ingrese un número para calcular su factorial:");
+    int n1 = int.Parse(Console.ReadLine());
+    int res = 1;
+    for (int i = 1; i <= n1; i++)
+    {
+        res *= i;
+    }
+    Console.WriteLine("Factorial de " + n1 + ": " + res);
+}
 
 //Console.WriteLine("========================================= Ejercicio 4 ==========================================");
 //Console.WriteLine("Ingresa un número para calcular su factorial:");
@@ -29,36 +87,35 @@
 
 
 
-Console.WriteLine("========================================= Ejercicio 5 ==========================================");
+//Console.WriteLine("========================================= Ejercicio 5 ==========================================");
 
-int numero = ObtenerNumero();
+//int numero = ObtenerNumero();
 
-Console.WriteLine(EsPrimo(numero)
-    ? $"{numero} es un número primo."
-    : $"{numero} no es un número primo.");
-    
-static int ObtenerNumero()
-{
-    Console.WriteLine("Ingresa un número para verificar si es primo:");
-    return Convert.ToInt32(Console.ReadLine());
-}
-static bool EsPrimo(int numero)
-{
-    if (numero <= 1)
-        return false;
+//Console.WriteLine(EsPrimo(numero)
+//    ? $"{numero} es un número primo."
+//    : $"{numero} no es un número primo.");
 
-    for (int i = 2; i * i <= numero; i++)
-        if (numero % i == 0)
-            return false;
+//static int ObtenerNumero()
+//{
+//    Console.WriteLine("Ingresa un número para verificar si es primo:");
+//    return Convert.ToInt32(Console.ReadLine());
+//}
+//static bool EsPrimo(int numero)
+//{
+//    if (numero <= 1)
+//        return false;
 
-    return true;
-}
+//    for (int i = 2; i * i <= numero; i++)
+//        if (numero % i == 0)
+//            return false;
 
-
+//    return true;
+//}
 
 //Inversión de Cadena: 
 //6) Toma una cadena de texto y muestra su inversión. 
 
+//Console.WriteLine("========================================= Ejercicio 5 ==========================================");
 //Suma de Números Pares: 
 //7) Calcula la suma de los números pares en un rango especificado por el usuario. 
 
