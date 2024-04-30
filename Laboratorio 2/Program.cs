@@ -8,6 +8,7 @@ int a = int.Parse(Console.ReadLine());
 ////1) Realiza la suma, resta, multiplicación y división de dos números ingresados por el usuario. 
 if (a == 1)
 {
+    Console.WriteLine("========================================= Ejercicio 1 ==========================================");
     Console.WriteLine("Ingresa el primer número:");
     var numero1 = Convert.ToDouble(Console.ReadLine());
     Console.WriteLine("Ingresa el segundo número:");
@@ -37,6 +38,7 @@ if (a == 1)
 
 else if (a == 2)
 {
+    Console.WriteLine("========================================= Ejercicio 2 ==========================================");
     Console.WriteLine("Ingrese un número para verificar si es par o impar:");
     int n1 = int.Parse(Console.ReadLine());
     if (n1 % 2 != 0)
@@ -49,6 +51,7 @@ else if (a == 2)
 
 else if (a == 3)
 {
+    Console.WriteLine("========================================= Ejercicio 3 ==========================================");
     Console.WriteLine("Ingrese la base del triángulo:");
     int b = int.Parse(Console.ReadLine());
     Console.WriteLine("Ingrese la altura del triángulo:");
@@ -60,6 +63,7 @@ else if (a == 3)
 
 else if (a == 4)
 {
+    Console.WriteLine("========================================= Ejercicio 4 ==========================================");
     Console.WriteLine("Ingrese un número para calcular su factorial:");
     int n1 = int.Parse(Console.ReadLine());
     int res = 1;
@@ -70,17 +74,6 @@ else if (a == 4)
     Console.WriteLine("Factorial de " + n1 + ": " + res);
 }
 
-//Console.WriteLine("========================================= Ejercicio 4 ==========================================");
-//Console.WriteLine("Ingresa un número para calcular su factorial:");
-//int numero = Convert.ToInt32(Console.ReadLine());
-
-//long factorial = 1;
-//for (int i = 2; i <= numero; i++)
-//{
-//    factorial *= i;
-//}
-
-//Console.WriteLine($"El factorial de {numero} es: {factorial}");
 //Número Primo: 
 
 //5) Verifica si un número ingresado por el usuario es primo o no.
@@ -109,32 +102,97 @@ else if (a == 5)
 //Inversión de Cadena: 
 //6) Toma una cadena de texto y muestra su inversión. 
 
-//Console.WriteLine("========================================= Ejercicio 5 ==========================================");
+else if (a == 6)
+{
+    Console.WriteLine("========================================= Ejercicio 6 ==========================================");
+    Console.WriteLine("Ingrese una cadena para invertir:");
+    string cadena = Console.ReadLine();
+    string res = "";
+    for (int i = cadena.Length - 1; i >= 0; i--)
+        res += cadena[i];
+    Console.WriteLine("Cadena invertida: " + res);
+}
+
 //Suma de Números Pares: 
 //7) Calcula la suma de los números pares en un rango especificado por el usuario. 
 
+else if (a == 7)
+{
+    Console.WriteLine("========================================= Ejercicio 7 ==========================================");
+    Console.WriteLine("Ingrese el inicio del rango:");
+    int n1 = int.Parse(Console.ReadLine());
+    Console.WriteLine("Ingrese el final del rango:");
+    int n2 = int.Parse(Console.ReadLine());
+    int res = 0;
+    for (int i = n1 + 1; i < n2; i++)
+    {
+        if (i % 2 == 0)
+            res += i;
+    }
+    Console.WriteLine("Suma de números pares en el rango: " + res);
+}
 //Lista de Cuadrados: 
 //8) Crea una lista de los cuadrados de los primeros 10 números naturales. 
 
+else if (a == 8)
+{
+    Console.WriteLine("========================================= Ejercicio 8 ==========================================");
+    Console.WriteLine("Lista de cuadrados de los primeros 10 números naturales:");
+    for (int i = 1; i <= 10; i++)
+        Console.WriteLine(i + "^2 = " + (i*i));
+}
 //Contador de Vocales: 
 //9) Cuenta el número de vocales en una cadena de texto. 
+
+else if (a == 9)
+{
+    Console.WriteLine("========================================= Ejercicio 9 ==========================================");
+    Console.WriteLine("Ingrese una cadena para contar las vocales:");
+    string txt = Console.ReadLine();
+    int cont = 0;
+    foreach (char c in txt)
+    {
+        if ("aeiouAEIOU".Contains(c))
+            cont++;
+    }
+    Console.WriteLine("Número de vocales: " + cont);
+}
 
 //Números de la Serie Fibonacci: 
 //10) Genera los primeros 10 números de la serie Fibonacci. 
 
+else if (a == 10)
+{
+    Console.WriteLine("========================================= Ejercicio 10 ==========================================");
+    Console.WriteLine("Primeros 10 números de la serie Fibonacci:");
+    int num1 = 0, num2 = 1, count = 0;
+    while (count < 10)
+    {
+        Console.WriteLine(num1);
+        int temp = num1;
+        num1 = num2;
+        num2 = temp + num2;
+        count++;
+    }
+}
 
 //Ordenamiento de Lista: 
 //11) Ordena una lista de números ingresados por el usuario de menor a mayor. 
 
+Console.WriteLine("========================================= Ejercicio 11 ==========================================");
 //Palíndromo: 
 //12) Verifica si una palabra ingresada por el usuario es un palíndromo. 
 
+Console.WriteLine("========================================= Ejercicio 12 ==========================================");
 //Generador de Tablas de Multiplicar: 
 //13) Crea un programa que genere la tabla de multiplicar de un número ingresado por el usuario. 
 
+Console.WriteLine("========================================= Ejercicio 13 ==========================================");
 //Cálculo del Área de un Círculo: 
 //14) Pide el radio de un círculo al usuario y calcula su área. 
 
+Console.WriteLine("========================================= Ejercicio 14 ==========================================");
 //Suma de Dígitos: 
 //15) Toma un número entero y calcula la suma de sus dígitos. 
 
+Console.WriteLine("========================================= Ejercicio 15 ==========================================");
