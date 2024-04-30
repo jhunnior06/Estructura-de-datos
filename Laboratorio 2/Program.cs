@@ -42,7 +42,7 @@ static int ObtenerNumero()
     Console.WriteLine("Ingresa un número para verificar si es primo:");
     return Convert.ToInt32(Console.ReadLine());
 }
-static Boolean EsPrimo(int numero)
+static bool EsPrimo(int numero)
 {
     if (numero <= 1)
         return false;
