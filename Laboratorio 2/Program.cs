@@ -179,20 +179,81 @@ else if (a == 10)
 //Ordenamiento de Lista: 
 //11) Ordena una lista de números ingresados por el usuario de menor a mayor. 
 
-Console.WriteLine("========================================= Ejercicio 11 ==========================================");
+else if (a == 11)
+{
+    Console.WriteLine("========================================= Ejercicio 11 ==========================================");
+    Console.WriteLine("Ingrese la cantidad de elementos para la lista de numeros:");
+    int n1 = int.Parse(Console.ReadLine());
+    int[] lista = new int[n1];
+    for (int i = 0; i < n1; i++)
+    {
+        Console.WriteLine("Ingrese los elementos " + (i + 1) + ":");
+        lista[i] = int.Parse(Console.ReadLine());
+    }
+    Array.Sort(lista);
+    Console.WriteLine("Lista ordenada: " + string.Join(", ", lista));
+}
 //Palíndromo: 
 //12) Verifica si una palabra ingresada por el usuario es un palíndromo. 
 
-Console.WriteLine("========================================= Ejercicio 12 ==========================================");
+else if (a == 12)
+{
+    Console.WriteLine("========================================= Ejercicio 12 ==========================================");
+    Console.WriteLine("Ingrese una palabra o frase para verificar si es palíndromo:");
+    string pl = Console.ReadLine().Replace(" ", "").ToLower();
+    bool esPalindromo = true;
+    for (int i = 0; i < pl.Length / 2; i++)
+    {
+        if (pl[i] != pl[pl.Length - 1 - i])
+        {
+            esPalindromo = false;
+            break;
+        }
+    }
+    if (esPalindromo)
+        Console.WriteLine($"La palabra {pl} es un palíndromo.");
+    else
+        Console.WriteLine($"La palabra {pl} no es un palíndromo.");
+}
+
 //Generador de Tablas de Multiplicar: 
 //13) Crea un programa que genere la tabla de multiplicar de un número ingresado por el usuario. 
 
-Console.WriteLine("========================================= Ejercicio 13 ==========================================");
+else if (a == 13)
+{
+    Console.WriteLine("========================================= Ejercicio 13 ==========================================");
+    Console.WriteLine("Ingrese un número para generar su tabla de multiplicar:");
+    int n1 = int.Parse(Console.ReadLine());
+    for (int i = 0; i <= 12; i++)
+        Console.WriteLine($"{n1} x {i} = {n1 * i}");
+}
+
 //Cálculo del Área de un Círculo: 
 //14) Pide el radio de un círculo al usuario y calcula su área. 
 
-Console.WriteLine("========================================= Ejercicio 14 ==========================================");
+else if (a == 14)
+{
+    Console.WriteLine("========================================= Ejercicio 14 ==========================================");
+    Console.WriteLine("Ingrese el radio del círculo:");
+    double radio = double.Parse(Console.ReadLine());
+    double area = Math.PI * radio * radio;
+    Console.WriteLine($"Área del círculo es : {area}");
+}
+
 //Suma de Dígitos: 
 //15) Toma un número entero y calcula la suma de sus dígitos. 
 
-Console.WriteLine("========================================= Ejercicio 15 ==========================================");
+else if (a == 15)
+{
+    Console.WriteLine("========================================= Ejercicio 15 ==========================================");
+    Console.WriteLine("Ingrese un número para calcular la suma de sus dígitos:");
+    string num = Console.ReadLine();
+    int sumaDigitos = 0;
+    foreach (char digito in num)
+        sumaDigitos += int.Parse(digito.ToString());
+    Console.WriteLine("Suma de dígitos: " + sumaDigitos);
+}
+else
+{
+    Console.WriteLine("Opción no válida.");
+}
