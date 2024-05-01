@@ -105,12 +105,12 @@ else if (a == 5)
 else if (a == 6)
 {
     Console.WriteLine("========================================= Ejercicio 6 ==========================================");
-    Console.WriteLine("Ingrese una cadena para invertir:");
+    Console.WriteLine("Ingrese una cadena de texto para invertir:");
     string cadena = Console.ReadLine();
     string res = "";
     for (int i = cadena.Length - 1; i >= 0; i--)
         res += cadena[i];
-    Console.WriteLine("Cadena invertida: " + res);
+    Console.WriteLine("Cadena de texto invertida: " + res);
 }
 
 //Suma de Números Pares: 
