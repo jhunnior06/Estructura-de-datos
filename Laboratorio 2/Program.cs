@@ -147,7 +147,7 @@ else if (a == 8)
 else if (a == 9)
 {
     Console.WriteLine("========================================= Ejercicio 9 ==========================================");
-    Console.WriteLine("Ingrese una cadena para contar las vocales:");
+    Console.WriteLine("Ingrese una cadena de texto para contar las vocales:");
     string txt = Console.ReadLine();
     int cont = 0;
     foreach (char c in txt)
@@ -155,7 +155,7 @@ else if (a == 9)
         if ("aeiouAEIOU".Contains(c))
             cont++;
     }
-    Console.WriteLine("Número de vocales: " + cont);
+    Console.WriteLine("Número de vocales es: " + cont);
 }
 
 //Números de la Serie Fibonacci: 
