@@ -214,22 +214,22 @@ else if (a == 10)
     Console.WriteLine($"La suma de los elementos del arreglo es: {suma}");
     Console.WriteLine($"La cantidad de elementos en el arreglo es: {cantidadElementos}");
 
-int CalcularSuma(int[] arreglo)
+    int CalcularSuma(int[] arreglo)
     {
-    int suma = 0;
-    foreach (int elemento in arreglo)
-    {
-        suma += elemento;
-    }
-    return suma;
+        int suma = 0;
+        foreach (int elemento in arreglo)
+        {
+            suma += elemento;
+        }
+        return suma;
     }
 }
 else if (a == 11)
 
 //3.Crear un array que permita ingresar n números enteros, contar cuántos números son negativos, positivos y cuántos son cero.
 {
-    
-Console.Write("Ingrese tamaño del array : ");
+
+    Console.Write("Ingrese tamaño del array : ");
     int[] m = new int[20];
     double pos = 0, neg = 0, cero = 0;
     for (int i = 0; i < m.Length; i++)
@@ -247,4 +247,55 @@ Console.Write("Ingrese tamaño del array : ");
     Console.WriteLine("Total Ceros :" + cero);
     Console.ReadLine();
 
+}
+
+//Realizar la suma de dos arreglos de una dimension 
+else if (a == 12)
+{
+    Console.Write("Ingrese tamaño del primer arreglo : ");
+    int n = int.Parse(Console.ReadLine());
+    int[] arreglo1 = new int[n];
+
+    for (int i = 0; i < arreglo1.Length; i++)
+    {
+        Console.Write("Ingrese elemento [" + i + "] del primer arreglo: ");
+        arreglo1[i] = int.Parse(Console.ReadLine());
+    }
+
+    Console.Write("Ingrese tamaño del segundo arreglo : ");
+    int k = int.Parse(Console.ReadLine());
+    int[] arreglo2 = new int[k];
+
+    for (int i = 0; i < arreglo2.Length; i++)
+    {
+        Console.Write("Ingrese elemento [" + i + "] del segundo arreglo: ");
+        arreglo2[i] = int.Parse(Console.ReadLine());
+    }
+
+    int[] arregloSuma = SumarArreglos(arreglo1, arreglo2);
+    ImprimirArreglo(arregloSuma);
+    }
+
+    int[] SumarArreglos(int[] arreglo1, int[] arreglo2)
+    {
+    int[] arregloSuma = new int[Math.Max(arreglo1.Length, arreglo2.Length)];
+
+    for (int i = 0; i < arregloSuma.Length; i++)
+    {
+        int valorArreglo1 = (i < arreglo1.Length) ? arreglo1[i] : 0;
+        int valorArreglo2 = (i < arreglo2.Length) ? arreglo2[i] : 0;
+        arregloSuma[i] = valorArreglo1 + valorArreglo2;
+    }
+
+    return arregloSuma;
+    }
+
+    static void ImprimirArreglo(int[] arreglo)
+    {
+    Console.WriteLine("El arreglo resultado de la suma es:");
+    foreach (int elemento in arreglo)
+    {
+        Console.Write(elemento + " ");
+    }
+    Console.WriteLine();
 }
