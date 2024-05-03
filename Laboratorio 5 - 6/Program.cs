@@ -3,6 +3,8 @@
 //Recursividad:
 //1) Ejercicio 1: Escribe una función recursiva que imprima los números pares del 1 al 100. 
 
+using System.ComponentModel.Design;
+
 Console.WriteLine("Ingrese un número para elegir una opción:");
 int a = int.Parse(Console.ReadLine());
 
@@ -211,13 +213,38 @@ else if (a == 10)
 
     Console.WriteLine($"La suma de los elementos del arreglo es: {suma}");
     Console.WriteLine($"La cantidad de elementos en el arreglo es: {cantidadElementos}");
-}
+
 int CalcularSuma(int[] arreglo)
-{
+    {
     int suma = 0;
     foreach (int elemento in arreglo)
     {
         suma += elemento;
     }
     return suma;
+    }
+}
+else if (a == 11)
+
+//3.Crear un array que permita ingresar n números enteros, contar cuántos números son negativos, positivos y cuántos son cero.
+{
+    
+Console.Write("Ingrese tamaño del array : ");
+    int[] m = new int[20];
+    double pos = 0, neg = 0, cero = 0;
+    for (int i = 0; i < m.Length; i++)
+    {
+        Console.Write("Ingrese elemento [" + i + "] : ");
+        m[i] = int.Parse(Console.ReadLine());
+        if (m[i] == 0)
+        { cero++; }
+        else if (m[i] > 0)
+        { pos++; }
+        else { neg++; }
+    }
+    Console.WriteLine("Total Positivos :" + pos);
+    Console.WriteLine("Total Negativos :" + neg);
+    Console.WriteLine("Total Ceros :" + cero);
+    Console.ReadLine();
+
 }
