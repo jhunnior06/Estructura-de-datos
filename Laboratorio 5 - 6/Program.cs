@@ -4,6 +4,7 @@
 //1) Ejercicio 1: Escribe una función recursiva que imprima los números pares del 1 al 100. 
 
 using System.ComponentModel.Design;
+using System.Security.Cryptography.X509Certificates;
 
 Console.WriteLine("Ingrese un número para elegir una opción:");
 int a = int.Parse(Console.ReadLine());
@@ -274,7 +275,7 @@ else if (a == 12)
 
     int[] arregloSuma = SumarArreglos(arreglo1, arreglo2);
     ImprimirArreglo(arregloSuma);
-    }
+    
 
     int[] SumarArreglos(int[] arreglo1, int[] arreglo2)
     {
@@ -298,4 +299,29 @@ else if (a == 12)
         Console.Write(elemento + " ");
     }
     Console.WriteLine();
+    }
+}
+
+else if (a == 13)
+{
+    Console.Write("Ingrese número: ");
+    int numero = int.Parse(Console.ReadLine());
+
+    int resultadoRecursividad = EjemploRecursividad(numero);
+
+    Console.WriteLine("El resultado de la recursividad es: " + resultadoRecursividad);
+    
+    int EjemploRecursividad(int numero)
+    {
+    if (numero == 0)
+    {
+        return 1;
+    }
+    return numero*EjemploRecursividad(numero - 1);
+    }
+}
+
+else if (a == 14)
+{
+
 }
