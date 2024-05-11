@@ -11,5 +11,11 @@ namespace practicar
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            CboTipoSeguro.SelectedIndex = 0;    
+            cboArea1.SelectedIndex = 0;
+        }
     }
 }

@@ -275,30 +275,30 @@ else if (a == 12)
 
     int[] arregloSuma = SumarArreglos(arreglo1, arreglo2);
     ImprimirArreglo(arregloSuma);
-    
+
 
     int[] SumarArreglos(int[] arreglo1, int[] arreglo2)
     {
-    int[] arregloSuma = new int[Math.Max(arreglo1.Length, arreglo2.Length)];
+        int[] arregloSuma = new int[Math.Max(arreglo1.Length, arreglo2.Length)];
 
-    for (int i = 0; i < arregloSuma.Length; i++)
-    {
-        int valorArreglo1 = (i < arreglo1.Length) ? arreglo1[i] : 0;
-        int valorArreglo2 = (i < arreglo2.Length) ? arreglo2[i] : 0;
-        arregloSuma[i] = valorArreglo1 + valorArreglo2;
-    }
+        for (int i = 0; i < arregloSuma.Length; i++)
+        {
+            int valorArreglo1 = (i < arreglo1.Length) ? arreglo1[i] : 0;
+            int valorArreglo2 = (i < arreglo2.Length) ? arreglo2[i] : 0;
+            arregloSuma[i] = valorArreglo1 + valorArreglo2;
+        }
 
-    return arregloSuma;
+        return arregloSuma;
     }
 
     static void ImprimirArreglo(int[] arreglo)
     {
-    Console.WriteLine("El arreglo resultado de la suma es:");
-    foreach (int elemento in arreglo)
-    {
-        Console.Write(elemento + " ");
-    }
-    Console.WriteLine();
+        Console.WriteLine("El arreglo resultado de la suma es:");
+        foreach (int elemento in arreglo)
+        {
+            Console.Write(elemento + " ");
+        }
+        Console.WriteLine();
     }
 }
 
@@ -310,18 +310,54 @@ else if (a == 13)
     int resultadoRecursividad = EjemploRecursividad(numero);
 
     Console.WriteLine("El resultado de la recursividad es: " + resultadoRecursividad);
-    
+
     int EjemploRecursividad(int numero)
     {
-    if (numero == 0)
-    {
-        return 1;
-    }
-    return numero*EjemploRecursividad(numero - 1);
+        if (numero == 0)
+        {
+            return 1;
+        }
+        return numero * EjemploRecursividad(numero - 1);
     }
 }
 
 else if (a == 14)
-{
 
+{
+    Random r = new Random();
+
+    // Crear la matriz
+    int[,] matrizAleatoria = new int[100, 100];
+    for (int i = 0; i < matrizAleatoria.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrizAleatoria.GetLength(1); j++)
+        {
+            matrizAleatoria[i, j] = r.Next(0, 101);  // Valores aleatorios entre 0 y 100 para la matriz
+            Console.Write(matrizAleatoria[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
+
+//Ejercicio Matrices: 
+
+//Ejercicio 1: 
+//Crea una matriz de números aleatorios de tamaño 100x100. 
+
+else if (a == 15)
+{
+    Random r = new Random();
+
+    // Crear la matriz
+    int[,] matriz = new int[100, 100];
+    for (int i = 0; i < 100; i++)
+    {
+        for (int j = 0; j < 100; j++)
+        {
+            matriz[i, j] = r.Next(0, 101);  // Valores aleatorios entre 0 y 100 para la primera matriz
+            Console.Write(matriz[i, j] + " ");  // Imprimir cada valor de la matriz
+        }
+        Console.WriteLine();  // Salto de línea al final de cada fila
+    }
 }
